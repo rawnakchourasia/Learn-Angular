@@ -14,7 +14,13 @@ export class ServersComponent implements OnInit {
     return 'closed';
   }
 
-  constructor() { }
+  serverRunning = false;
+
+  constructor() {
+    setTimeout(() => {
+      this.serverRunning = true;
+    }, 2000);
+   }
 
   ngOnInit(): void {
   }

@@ -1,2 +1,11 @@
-<p>{{ 'server' }} with ID {{ serverId }} is {{ serverStatus }}</p>
-<p>{{ 'server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
+<div class="container">
+    <div class="col-md-12">
+        <div class="row">
+            <p>{{ 'server' }} with ID {{ serverId }} is {{ serverStatus }}</p>
+            <p>{{ 'server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
+            <button class="btn btn-primary" [disabled]="!serverRunning">Click me</button>
+            <p [innerText]="serverRunning"></p>
+        </div>
+    </div>
+    
+</div>
