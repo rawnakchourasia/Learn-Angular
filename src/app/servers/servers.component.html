@@ -2,8 +2,9 @@
     <div class="col-md-12">
         <div class="row">
             <label for="serverName">Server Name</label>
-            <input type="text" class="form-control" (input)="onUpdateServerName($event)" id="serverName">
-            <p>{{ typedServerName }}</p>
+            <!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)" id="serverName"> -->
+            <input type="text" class="form-control" [(ngModel)]="typedServerName">
+            <!-- <p>{{ typedServerName }}</p> -->
             <p>{{ 'server' }} with ID {{ serverId }} is {{ serverStatus }}</p>
             <p>{{ 'server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
             <button class="btn btn-primary" [disabled]="!serverRunning" (click)='checkServerStatus()'>Click me</button>

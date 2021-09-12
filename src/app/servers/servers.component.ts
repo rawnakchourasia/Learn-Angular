@@ -29,7 +29,7 @@ export class ServersComponent implements OnInit {
 
   }
   checkServerStatus(){
-    this.statusOfTheServer='Server has started to run';
+    this.statusOfTheServer='Server has started to run on Server :'+this.typedServerName;
   };
 
   onUpdateServerName(event){
