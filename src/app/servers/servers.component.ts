@@ -9,6 +9,8 @@ export class ServersComponent implements OnInit {
 
   serverId = 10;
   serverStatus = 'open';
+  statusOfTheServer = 'Server is not running';
+  typedServerName = '';
 
   getServerStatus(){
     return 'closed';
@@ -23,6 +25,15 @@ export class ServersComponent implements OnInit {
    }
 
   ngOnInit(): void {
-  }
+    
 
+  }
+  checkServerStatus(){
+    this.statusOfTheServer='Server has started to run';
+  };
+
+  onUpdateServerName(event){
+    // console.log(event);
+    this.typedServerName = event.target.value;
+  }
 }

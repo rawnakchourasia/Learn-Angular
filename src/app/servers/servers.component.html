@@ -1,10 +1,14 @@
 <div class="container">
     <div class="col-md-12">
         <div class="row">
+            <label for="serverName">Server Name</label>
+            <input type="text" class="form-control" (input)="onUpdateServerName($event)" id="serverName">
+            <p>{{ typedServerName }}</p>
             <p>{{ 'server' }} with ID {{ serverId }} is {{ serverStatus }}</p>
             <p>{{ 'server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
-            <button class="btn btn-primary" [disabled]="!serverRunning">Click me</button>
+            <button class="btn btn-primary" [disabled]="!serverRunning" (click)='checkServerStatus()'>Click me</button>
             <p [innerText]="serverRunning"></p>
+            <p>{{ statusOfTheServer }}</p>
         </div>
     </div>
     
