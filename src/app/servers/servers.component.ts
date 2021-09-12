@@ -17,6 +17,7 @@ export class ServersComponent implements OnInit {
   }
 
   serverRunning = false;
+  serverName = false;
 
   constructor() {
     setTimeout(() => {
@@ -29,6 +30,7 @@ export class ServersComponent implements OnInit {
 
   }
   checkServerStatus(){
+    this.serverName=true;
     this.statusOfTheServer='Server has started to run on Server :'+this.typedServerName;
   };
 
