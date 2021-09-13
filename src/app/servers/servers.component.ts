@@ -11,6 +11,7 @@ export class ServersComponent implements OnInit {
   serverStatus = 'open';
   statusOfTheServer = 'Server is not running';
   typedServerName = '';
+  servers = ["server1", "server2"];
 
   getServerStatus(){
     return 'closed';
@@ -30,6 +31,7 @@ export class ServersComponent implements OnInit {
 
   }
   checkServerStatus(){
+    this.servers.push(this.typedServerName);
     this.serverName=true;
     this.statusOfTheServer='Server has started to run on Server :'+this.typedServerName;
   };
